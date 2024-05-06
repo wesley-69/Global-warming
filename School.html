@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Warming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+
+    }
+
+    nav {
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      color: black;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+    }
+
+    section {
+      height: 100dvh;
+    }
+
+    #home {
+      background: #000;
+      background-image: url(https://t4.ftcdn.net/jpg/05/61/61/83/360_F_561618320_PpumfzBXQfDWVU4JzvpUyr8O7KrqGBaQ.jpg);
+      background-size: cover;
+      background-position: center;
+      mask-image: linear-gradient(0deg, transparent, #000, #000, #000, #000, transparent, transparent);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+    }
+
+    #home p {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    #home svg {
+      position: fixed;
+      bottom: 32%;
+      animation: bounce 2s infinite;
+      height: 30px;
+      width: 30px;
+      z-index: 1000;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(10px);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    #what {
+      background-color: linear-gradient(0deg, transparent, #dadada, #ffffff);
+      height: 65dvh;
+      display: flex;
+
+    }
+
+    .card {
+      background-color: transparent;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 300px;
+      width: 300px;
+      margin: 0 auto;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.5s;
+      margin-top: 100px;
+    }
+
+    .card-inner {
+      background-color: transparent;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s;
+      transform-style: preserve-3d;
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .card-front {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      color: black;
+    }
+
+
+    .card-front h2 {
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .card-front p {
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .card-back {
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      color: black;
+      transform: rotateY(180deg);
+    }
+
+    .card-back p {
+      padding: 0 20px;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+    }
+
+    #why {
+      background-color: #d4d4d4;
+    }
+
+    #why h2 {
+      text-align: center;
+    }
+
+    #why ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #why ul li {
+      margin: 10px 0;
+    }
+
+    #why ul li img {
+      width: 100px;
+      height: 100px;
+    }
+    
+
+    #how {
+      background-color: #c4c4c4;
+    }
+
+    #solutions {
+      background-color: #b4b4b4;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>Global Warming</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#what">What</a></li>
+      <li><a href="#why">Why</a></li>
+      <li><a href="#how">How</a></li>
+      <li><a href="#History">History</a></li>
+    </ul>
+  </nav>
+  <section id="home">
+    <h1>Global Warming</h1>
+    <p> Scroll for more</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </section>
+  <section id="what">
+    <!-- section idea: have a flash card quiz (4 cards) with questions about global warming and when user clicks the card it flips over showing the answer -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>What is Global Warming?</h2>
+          <p>Click to reveal!</p>
+          </div>
+        <div class="card-back">
+          <p>Global warming is the long-term heating of Earth's climate system observed since the pre-industrial period (between 1850 and 1900) due to human activities, primarily fossil fuel burning, which increases greenhouse gas levels in Earth’s atmosphere.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>What are Greenhouse Gases?</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <p>Greenhouse gases are gases that trap heat in the atmosphere. The primary greenhouse gases in Earth's atmosphere are water vapor, carbon dioxide, methane, nitrous oxide, and ozone.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>What is the Greenhouse Effect?</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <p>The greenhouse effect is the process by which radiation from a planet's atmosphere warms the planet's surface to a temperature above what it would be without this atmosphere.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <h2>What are the Effects of Global Warming?</h2>
+          <p>Click to reveal!</p>
+        </div>
+        <div class="card-back">
+          <p>Global warming has a range of effects, including melting ice caps, rising sea levels, more frequent and severe weather events, and increased heatwaves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="why">
+    <!-- section idea: have a list of reasons why global warming is happening and with photos -->
+    <h2>Why is Global Warming Happening?</h2>
+    <ul>
+      <li>Global warming is happening because of the fossil fuels, cutting down forests and farming livestock are increasingly influencing the climate and the earth's temperature.</li>
+      <li>By burning fossil fuels into the earth is bad because they release nitrogen ioxides into the atmosphere, which contribute to the formation of smog and acid rain. </li>
+      <li>By cutting down forests we are destroying the earth's natural way of cleaning the air and producing oxygen for us to breath.</li>
+      <li>By farming livestock we are producing methane gas into the atmosphere which is a greenhouse gas that is 25 times more potent than carbon dioxide. </li>
+      <li>By doing these things we are destroying the earth's natural way of cleaning the air and producing oxygen for us to breath. </li>
+      <li>Acid rain that seeps into the ground can dissolve nutrients, such as magnesium and calcium, that trees need to be healthy and produce oxygen for humans to breath so that the human race dosen't die off due to global warming.</li>
+    </ul>
+
+
+  </section>
+  <section id="how">
+    <!-- section idea: have a list of ways to reduce global warming and with photos -->
+    <h2>How Can We Reduce Global Warming?</h2>
+    <ul>
+      <li> We can change our habits and cut down on the amount of energy we use, recycle, and use public transportation.</li>
+      <li> With some of the things we can do to save our earth is to switch to electric cars so that we dont use as much carbon dioxide into the atmosphere destroying our ozone layer with destroying our earth.</li>
+      <li> We can also plant more trees to help reduce the amount of carbon dioxide in the atmosphere.</li>
+      <li> by planting more trees we can reduce the amount of carbon dioxide in the air and turn it into oxygen for us humans to breath.</li>
+    </ul>
+  </section>
+
+  <section id="History"></section>
+</section>
+<section id="History">
+<!-- section idea: have a section on the history of global warming -->
+<h2>History of Global Warming</h2>
+<ul>
+  <li>A person in NASA in 1938 called Guy Callander connected carbon dioxide increases in Earth's atmosphere to global warming.</li>
+  <li>Did you know that global warming only started in the mid 1800s.Which is proceeding at a rate not seen over many recent millennia (a period of a thousand years.) It's undeniable that human activites have produced more atmospheric gases that have trapped more of the Sun's energy in the Earth system.</li>
+  <li>Did you know that the Earth's average temperature has risen by 1.5 degrees Fahrenheit over the past century, and is projected to rise another 0.5 to 8.6 degrees Fahrenheit over the next hundred years.</li>
+  <li>Over the last centuary, the average temperatue </li>
+  <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', function() {
+        this.querySelector('.card-inner').style.transform = 'rotateY(180deg)';
+      });
+    });
+  </script>
+</body>
+</html>
+
